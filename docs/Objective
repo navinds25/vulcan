@@ -1,0 +1,20 @@
+
+Why Vulcan ?
+
+Of all the Configuration Management and Infrastructure as Code tools I've tried, salt is the most sensible for the following reasons:
+1. It has a master and slave architecture. With both the master and the minion(slave) binding to ports to allow communication between them. -
+I like this because it doesn't use ssh which gives me an alternate way to access my server remotely and I can be at either the master or the minion to configure a particular server.
+
+2. Jinja rendering - I don't think I have to explain that jinja is way better than most other template rendering languages like Mako or Erb.
+
+3. Execute commands remotely and view the output.
+
+4. Ability to write python code as salt modules.
+
+While the last one works, well kinda... It was the inspiration for this project because it worked for smaller functions but when I tried to write more complex logic I struggled immensely. I started seeing inconsistencies in data on the minion, which lead me to think that I could build something that would be better at integrating complex logic into my Infrastructure management tool in a way that gives more power to the sysadmin.
+
+Why call it Vulcan ?
+
+Vulcan is the ancient Roman god of fire, including the fire of volcanoes, deserts, metalworking, and the forge. Since Vulcan was built to configure the OS and above, and few other tools operate so close the metal, the name seemed apt. Although now that I think about it, apt is closer.
+
+Why Vulcan Spec Language ?
